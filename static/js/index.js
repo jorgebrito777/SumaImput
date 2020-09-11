@@ -1,19 +1,17 @@
 //https://www.eclipse.org/paho/clients/js/
 
 function Suma() {
-	var x, y;
-	x="5000";
-	y="3000";
-	message = new Paho.MQTT.Message("S"+" "+ x +" "+ y );
+	n1=document.getElementById("n1").value
+	n2=document.getElementById("n2").value
+	message = new Paho.MQTT.Message("S"+" "+ n1 +" "+ n2 );
     message.destinationName = "jorgebito777@gmail.com/RASP";
     client.send(message);
 	
 }
 function Resta(){	
-	var x, y;
-	x="5000";
-	y="3000";
-	message = new Paho.MQTT.Message("R"+" "+ x +" "+ y );
+	n1=document.getElementById("n1").value
+	n2=document.getElementById("n2").value
+	message = new Paho.MQTT.Message("R"+" "+ n1 +" "+ n2 );
     message.destinationName = "jorgebito777@gmail.com/RASP";
     client.send(message);
 	
